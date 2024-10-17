@@ -1,6 +1,6 @@
 import './App.css';
 import Card from './components/Card';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import FiltroForm from './components/FiltroForm';
 
 async function fetchPeludos() {
@@ -14,17 +14,21 @@ function App() {
 		tipo: 'any',
 		genero: 'any',
 		estado: 'any',
+		esterilizado: 'any',
+		vacunado: 'any',
 	});
 
 	fetchPeludos().then((data) => {
 		setPeludos(data);
 	});
 
-	function getFiltro(gtipo, ggenero, gestado) {
+	function getFiltro(gtipo, ggenero, gestado, gesterilizado, gvacunado) {
 		setFiltro({
 			tipo: gtipo,
 			genero: ggenero,
 			estado: gestado,
+			esterilizado: gesterilizado,
+			vacunado: gvacunado,
 		});
 	}
 
@@ -34,8 +38,11 @@ function App() {
 		const filtrarPorTipo = peludo.tipo === filtro.tipo || filtro.tipo === 'any';
 		const filtrarPorGenero = peludo.genero === filtro.genero || filtro.genero === 'any';
 		const filtrarPorEstado = peludo.estado === filtro.estado || filtro.estado === 'any';
+		const filtrarPorEsterilizado = peludo.esterilizado == filtro.esterilizado || filtro.esterilizado === 'any';
+		const filtrarPorVacunado = peludo.vacunas == filtro.vacunado || filtro.vacunado === 'any';
+
 		// Retorna solo si cumple con todos los filtros
-		return filtrarPorTipo && filtrarPorGenero && filtrarPorEstado;
+		return filtrarPorTipo && filtrarPorGenero && filtrarPorEstado && filtrarPorEsterilizado && filtrarPorVacunado;
 	});
 
 	return (

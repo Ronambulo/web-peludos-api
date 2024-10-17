@@ -7,11 +7,13 @@ export default function FiltroForm({ getFiltro }) {
 		const tipo = event.target.Tipo.value;
 		const genero = event.target.Genero.value;
 		const estado = event.target.Estado.value;
-		getFiltro(tipo, genero, estado);
+		const esterilizado = event.target.Esterilizado.value;
+		const vacunado = event.target.Vacunado.value;
+		getFiltro(tipo, genero, estado, esterilizado, vacunado);
 	}
 
 	useEffect(() => {
-		getFiltro('any', 'any', 'any');
+		getFiltro('any', 'any', 'any', 'any', 'any');
 	}, []);
 
 	return (
@@ -38,6 +40,22 @@ export default function FiltroForm({ getFiltro }) {
 					<option value="any">Todos</option>
 					<option value="adopcion">Adopción</option>
 					<option value="encontrado">Encontrado</option>
+				</select>
+			</div>
+			<div className="divSelect">
+				<label>Vacunado:</label>
+				<select name="Vacunado" id="vacunado" className="formInput">
+					<option value="any">Todos</option>
+					<option value={1}>Si</option>
+					<option value={0}>No</option>
+				</select>
+			</div>
+			<div className="divSelect">
+				<label>Esterilizado:</label>
+				<select name="Esterilizado" id="esterilizado" className="formInput">
+					<option value="any">Todos</option>
+					<option value={1}>Si</option>
+					<option value={0}>No</option>
 				</select>
 			</div>
 			<button type="submit" className="formInput">

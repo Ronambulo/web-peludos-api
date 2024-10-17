@@ -4,9 +4,9 @@
 	justify-content: top;
 	margin: 10px;
 	padding: 20px;
-	border: 1px solid #000;
-	background-color: #282c34;
-	border-radius: 10px;
+	border: 1px solid #111111;
+	background-color: #1d2027;
+	border-radius: 15px;
 	width: 300px;
 	height: 530px;
 	text-align: left;
@@ -16,8 +16,8 @@
 .md-chip {
 	display: inline-block;
 	background: rgb(187, 58, 58);
-	padding: 2px 15px;
-	font-weight: 500;
+	padding: 5px 15px;
+	font-weight: 600;
 	border-radius: 32px;
 	font-size: 13px;
 	&.md-chip-hover:hover {
@@ -44,9 +44,62 @@
 	margin-top: 0px;
 	text-align: justify;
 	color: whitesmoke;
+	height: 65px;
+	overflow: visible;
 }
 
 .enlace {
 	position: relative;
 	bottom: 0px;
+}
+
+.btn-div {
+	z-index: 1;
+	width: fit-content;
+	height: 570px;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+a {
+	color: #01c6fd;
+}
+
+.btn-adoptar {
+	width: 300px;
+	background-color: #282c34;
+	border-radius: 10px;
+	border: 1px solid #111111;
+	color: #ccc;
+	font-weight: 600;
+	padding: 8px 15px;
+	position: absolute;
+	bottom: 20px;
+}
+
+.infoContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.div-vac-est {
+	display: flex;
+	flex-direction: row;
+	gap: 6px;
+	align-items: center;
+}
+
+.infoContainer p {
+	margin: 0px;
+	background-color: #3f3f46;
+	color: #ccc;
+	font-weight: 600;
+	height: min-content;
+	padding: 5px 15px;
+	font-size: 13px;
+	border-radius: 15px;
+	width: fit-content;
+	text-align: center;
 }
