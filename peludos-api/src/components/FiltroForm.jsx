@@ -24,6 +24,7 @@ export default function FiltroForm({ getFiltro }) {
 					<option value="any">Todos</option>
 					<option value="Perro">Perro</option>
 					<option value="Gato">Gato</option>
+					<option value="Conejo">Conejo</option>
 				</select>
 			</div>
 			<div className="divSelect">

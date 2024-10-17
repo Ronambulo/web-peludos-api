@@ -48,8 +48,10 @@ function App() {
 	return (
 		<div className="App">
 			<header>
-				<h1>Peludos API</h1>
-				<FiltroForm getFiltro={getFiltro} />
+				<div className="header">
+					<h1>Peludos API</h1>
+					<FiltroForm getFiltro={getFiltro} />
+				</div>
 			</header>
 			<div className="peludos">
 				{peludosFiltrados.length > 0 ? (
