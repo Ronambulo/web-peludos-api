@@ -28,6 +28,7 @@
 @media (max-width: 600px) {
 	.cardContainer {
 		margin: 0px;
+		scale: 0.9;
 	}
 }
 
