@@ -8,6 +8,7 @@ export default function Card({ peludo }) {
 	const linkImage = peludo.imagen;
 	const descripcion = peludo.desc_personalidad.replace(/<\/?p>/g, '');
 	const adopcion = peludo.estado;
+	const enlace = peludo.url;
 
 	return (
 		<div className="cardContainer">
@@ -19,6 +20,9 @@ export default function Card({ peludo }) {
 				</p>
 			</div>
 			<p className="descripcion">{descripcion}</p>
+			<a className="enlace" href={enlace}>
+				<p>saber mas</p>
+			</a>
 		</div>
 	);
 }

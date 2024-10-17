@@ -45,3 +45,8 @@
 	text-align: justify;
 	color: whitesmoke;
 }
+
+.enlace {
+	position: relative;
+	bottom: 0px;
+}
