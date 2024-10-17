@@ -25,6 +25,12 @@
 	}
 }
 
+@media (max-width: 600px) {
+	.cardContainer {
+		margin: 0px;
+	}
+}
+
 .cardContainer img {
 	width: 300px;
 	aspect-ratio: 1;
